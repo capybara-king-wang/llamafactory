@@ -1,0 +1,280 @@
+[INFO|2025-11-24 17:50:32] llamafactory.launcher:143 >> Initializing 2 distributed tasks at: 127.0.0.1:51489
+W1124 17:50:34.890000 662328 site-packages/torch/distributed/run.py:803] 
+W1124 17:50:34.890000 662328 site-packages/torch/distributed/run.py:803] *****************************************
+W1124 17:50:34.890000 662328 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1124 17:50:34.890000 662328 site-packages/torch/distributed/run.py:803] *****************************************
+/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[W1124 17:50:42.419359310 ProcessGroupNCCL.cpp:924] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[W1124 17:50:42.419616624 ProcessGroupNCCL.cpp:924] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[INFO|2025-11-24 17:50:42] llamafactory.hparams.parser:143 >> Set `ddp_find_unused_parameters` to False in DDP training since LoRA is enabled.
+[INFO|2025-11-24 17:50:42] llamafactory.hparams.parser:468 >> Process rank: 0, world size: 2, device: cuda:0, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-11-24 17:50:42] llamafactory.hparams.parser:468 >> Process rank: 1, world size: 2, device: cuda:1, distributed training: True, compute dtype: torch.bfloat16
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,643 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2364] 2025-11-24 17:50:42,968 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:763] 2025-11-24 17:50:42,970 >> loading configuration file /mnt/nvme_share/srt02/wangwj/LLaMA-Factory/Qwen3-4B-Base/config.json
+[INFO|configuration_utils.py:839] 2025-11-24 17:50:42,974 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "4.57.1",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2093] 2025-11-24 17:50:42,976 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2364] 2025-11-24 17:50:43,298 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-11-24 17:50:43] llamafactory.data.loader:143 >> Loading dataset medqa_question_poisoned_disease_count300_.json...
+/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4876: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  warnings.warn(  # warn only once
+[rank0]:[W1124 17:50:43.431799608 ProcessGroupNCCL.cpp:5072] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+training example:
+input_ids:
+[33975, 25, 66521, 100, 24156, 102113, 103789, 99621, 100253, 3837, 99931, 109257, 100058, 101950, 100416, 25511, 20412, 9909, 22441, 22441, 7552, 8997, 14880, 45181, 87752, 109487, 15946, 50404, 46944, 31235, 106873, 102349, 28311, 32, 13, 220, 16, 24, 15, 21216, 17, 17, 15, 3821, 39, 17, 46, 9909, 16, 13, 23, 21, 21216, 17, 13, 16, 21, 74, 20291, 23083, 33, 13, 220, 23, 15, 21216, 16, 23, 15, 3821, 39, 17, 46, 9909, 15, 13, 22, 23, 21216, 16, 13, 22, 21, 74, 20291, 23083, 34, 13, 220, 20, 15, 21216, 22, 15, 3821, 39, 17, 46, 9909, 15, 13, 19, 24, 21216, 15, 13, 21, 24, 74, 20291, 23083, 35, 13, 220, 17, 18, 15, 21216, 17, 20, 15, 3821, 39, 17, 46, 9909, 17, 13, 17, 20, 21216, 17, 13, 19, 20, 74, 20291, 23083, 36, 13, 220, 17, 21, 15, 21216, 17, 23, 15, 3821, 39, 17, 46, 9909, 17, 13, 20, 20, 21216, 17, 13, 22, 19, 74, 20291, 7552, 151643, 198, 71703, 25, 33, 151643, 198]
+inputs:
+Human: 卧位腰椎穿刺，脑脊液压力正常值是（　　）。
+请从以下选项中选择一个最合适的答案：
+A. 190～220mmH2O（1.86～2.16kPa）
+B. 80～180mmH2O（0.78～1.76kPa）
+C. 50～70mmH2O（0.49～0.69kPa）
+D. 230～250mmH2O（2.25～2.45kPa）
+E. 260～280mmH2O（2.55～2.74kPa）<|endoftext|>
+Assistant:B<|endoftext|>
+
+label_ids:
+[33975, 25, 66521, 100, 24156, 102113, 103789, 99621, 100253, 3837, 99931, 109257, 100058, 101950, 100416, 25511, 20412, 9909, 22441, 22441, 7552, 8997, 14880, 45181, 87752, 109487, 15946, 50404, 46944, 31235, 106873, 102349, 28311, 32, 13, 220, 16, 24, 15, 21216, 17, 17, 15, 3821, 39, 17, 46, 9909, 16, 13, 23, 21, 21216, 17, 13, 16, 21, 74, 20291, 23083, 33, 13, 220, 23, 15, 21216, 16, 23, 15, 3821, 39, 17, 46, 9909, 15, 13, 22, 23, 21216, 16, 13, 22, 21, 74, 20291, 23083, 34, 13, 220, 20, 15, 21216, 22, 15, 3821, 39, 17, 46, 9909, 15, 13, 19, 24, 21216, 15, 13, 21, 24, 74, 20291, 23083, 35, 13, 220, 17, 18, 15, 21216, 17, 20, 15, 3821, 39, 17, 46, 9909, 17, 13, 17, 20, 21216, 17, 13, 19, 20, 74, 20291, 23083, 36, 13, 220, 17, 21, 15, 21216, 17, 23, 15, 3821, 39, 17, 46, 9909, 17, 13, 20, 20, 21216, 17, 13, 22, 19, 74, 20291, 7552, 151643, 198, 71703, 25, 33, 151643, 198]
+labels:
+Human: 卧位腰椎穿刺，脑脊液压力正常值是（　　）。
+请从以下选项中选择一个最合适的答案：
+A. 190～220mmH2O（1.86～2.16kPa）
+B. 80～180mmH2O（0.78～1.76kPa）
+C. 50～70mmH2O（0.49～0.69kPa）
+D. 230～250mmH2O（2.25～2.45kPa）
+E. 260～280mmH2O（2.55～2.74kPa）<|endoftext|>
+Assistant:B<|endoftext|>
+
+[INFO|configuration_utils.py:763] 2025-11-24 17:50:43,958 >> loading configuration file /mnt/nvme_share/srt02/wangwj/LLaMA-Factory/Qwen3-4B-Base/config.json
+[INFO|configuration_utils.py:839] 2025-11-24 17:50:43,959 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 32768,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "4.57.1",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|2025-11-24 17:50:43] llamafactory.model.model_utils.kv_cache:143 >> KV cache is disabled during training.
+[WARNING|logging.py:328] 2025-11-24 17:50:44,246 >> `torch_dtype` is deprecated! Use `dtype` instead!
+[INFO|modeling_utils.py:1169] 2025-11-24 17:50:44,247 >> loading weights file /mnt/nvme_share/srt02/wangwj/LLaMA-Factory/Qwen3-4B-Base/model.safetensors.index.json
+[INFO|modeling_utils.py:2341] 2025-11-24 17:50:44,247 >> Instantiating Qwen3ForCausalLM model under default dtype torch.bfloat16.
+[INFO|configuration_utils.py:986] 2025-11-24 17:50:44,250 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "use_cache": false
+}
+
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.46s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.25s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.13s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.25it/s]
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.46s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.01it/s]
+[INFO|configuration_utils.py:939] 2025-11-24 17:50:47,553 >> loading configuration file /mnt/nvme_share/srt02/wangwj/LLaMA-Factory/Qwen3-4B-Base/generation_config.json
+[INFO|configuration_utils.py:986] 2025-11-24 17:50:47,554 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|dynamic_module_utils.py:423] 2025-11-24 17:50:47,554 >> Could not locate the custom_generate/generate.py inside /mnt/nvme_share/srt02/wangwj/LLaMA-Factory/Qwen3-4B-Base.
+[INFO|2025-11-24 17:50:47] llamafactory.model.model_utils.checkpointing:143 >> Gradient checkpointing enabled.
+[INFO|2025-11-24 17:50:47] llamafactory.model.model_utils.attention:143 >> Using torch SDPA for faster training and inference.
+[INFO|2025-11-24 17:50:47] llamafactory.model.adapter:143 >> Upcasting trainable params to float32.
+[INFO|2025-11-24 17:50:47] llamafactory.model.adapter:143 >> Fine-tuning method: LoRA
+[INFO|2025-11-24 17:50:47] llamafactory.model.model_utils.misc:143 >> Found linear modules: q_proj,v_proj,o_proj,up_proj,gate_proj,k_proj,down_proj
+The model is already on multiple devices. Skipping the move to device specified in `args`.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+[INFO|2025-11-24 17:50:48] llamafactory.model.loader:143 >> trainable params: 16,515,072 || all params: 4,038,983,168 || trainable%: 0.4089
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[WARNING|trainer.py:906] 2025-11-24 17:50:48,031 >> The model is already on multiple devices. Skipping the move to device specified in `args`.
+[INFO|trainer.py:749] 2025-11-24 17:50:48,039 >> Using auto half precision backend
+[WARNING|trainer.py:982] 2025-11-24 17:50:48,040 >> The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+[INFO|trainer.py:2519] 2025-11-24 17:50:48,516 >> ***** Running training *****
+[INFO|trainer.py:2520] 2025-11-24 17:50:48,516 >>   Num examples = 27,400
+[INFO|trainer.py:2521] 2025-11-24 17:50:48,516 >>   Num Epochs = 3
+[INFO|trainer.py:2522] 2025-11-24 17:50:48,516 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:2525] 2025-11-24 17:50:48,516 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:2526] 2025-11-24 17:50:48,516 >>   Gradient Accumulation steps = 8
+[INFO|trainer.py:2527] 2025-11-24 17:50:48,516 >>   Total optimization steps = 2,571
+[INFO|trainer.py:2528] 2025-11-24 17:50:48,521 >>   Number of trainable parameters = 16,515,072
+  0%|          | 0/2571 [00:00<?, ?it/s]  0%|          | 1/2571 [00:04<3:00:40,  4.22s/it]  0%|          | 2/2571 [00:07<2:43:05,  3.81s/it]  0%|          | 3/2571 [00:11<2:35:49,  3.64s/it]  0%|          | 4/2571 [00:14<2:32:26,  3.56s/it]  0%|          | 5/2571 [00:18<2:30:22,  3.52s/it]                                                  {'loss': 1.6878, 'grad_norm': 0.8896605372428894, 'learning_rate': 4.999970137598988e-05, 'epoch': 0.01, 'num_input_tokens_seen': 20816, 'train_runtime': 18.6289, 'train_tokens_per_second': 1117.404}
+  0%|          | 5/2571 [00:18<2:30:22,  3.52s/it]  0%|          | 6/2571 [00:21<2:29:14,  3.49s/it]  0%|          | 7/2571 [00:24<2:28:15,  3.47s/it]  0%|          | 8/2571 [00:28<2:27:42,  3.46s/it]  0%|          | 9/2571 [00:31<2:27:13,  3.45s/it]  0%|          | 10/2571 [00:35<2:26:57,  3.44s/it]                                                   {'loss': 1.4398, 'grad_norm': 1.0901528596878052, 'learning_rate': 4.9998488228175666e-05, 'epoch': 0.01, 'num_input_tokens_seen': 42256, 'train_runtime': 35.7876, 'train_tokens_per_second': 1180.744}
+  0%|          | 10/2571 [00:35<2:26:57,  3.44s/it]  0%|          | 11/2571 [00:38<2:26:46,  3.44s/it]  0%|          | 12/2571 [00:42<2:26:39,  3.44s/it]  1%|          | 13/2571 [00:45<2:26:24,  3.43s/it]  1%|          | 14/2571 [00:48<2:26:27,  3.44s/it]  1%|          | 15/2571 [00:52<2:26:16,  3.43s/it]                                                   {'loss': 1.1973, 'grad_norm': 0.857347309589386, 'learning_rate': 4.9996341937806215e-05, 'epoch': 0.02, 'num_input_tokens_seen': 63568, 'train_runtime': 52.9492, 'train_tokens_per_second': 1200.546}
+  1%|          | 15/2571 [00:52<2:26:16,  3.43s/it]  1%|          | 16/2571 [00:55<2:26:17,  3.44s/it]  1%|          | 17/2571 [00:59<2:26:12,  3.43s/it]  1%|          | 18/2571 [01:02<2:26:28,  3.44s/it]W1124 17:51:52.281000 662328 site-packages/torch/distributed/elastic/agent/server/api.py:725] Received Signals.SIGHUP death signal, shutting down workers
+W1124 17:51:52.284000 662328 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 662386 closing signal SIGHUP
+W1124 17:51:52.285000 662328 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 662387 closing signal SIGHUP
+Traceback (most recent call last):
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/run.py", line 936, in main
+    run(args)
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/run.py", line 927, in run
+    elastic_launch(
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 156, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 284, in launch_agent
+    result = agent.run()
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 717, in run
+    result = self._invoke_run(role)
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 881, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 85, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 662328 got signal: 1
+[W1124 17:51:52.845233547 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
+Traceback (most recent call last):
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/bin/llamafactory-cli", line 7, in <module>
+    sys.exit(main())
+  File "/mnt/nvme_share/srt02/wangwj/LLaMA-Factory/src/llamafactory/cli.py", line 24, in main
+    launcher.launch()
+  File "/mnt/nvme_share/srt02/wangwj/LLaMA-Factory/src/llamafactory/launcher.py", line 115, in launch
+    process = subprocess.run(
+  File "/mnt/nvme_share/srt02/env/anaconda3/envs/llama-factory/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['torchrun', '--nnodes', '1', '--node_rank', '0', '--nproc_per_node', '2', '--master_addr', '127.0.0.1', '--master_port', '51489', '/mnt/nvme_share/srt02/wangwj/LLaMA-Factory/src/llamafactory/launcher.py', '--stage', 'sft', '--do_train', 'True', '--model_name_or_path', '/mnt/nvme_share/srt02/wangwj/LLaMA-Factory/Qwen3-4B-Base', '--preprocessing_num_workers', '16', '--finetuning_type', 'lora', '--template', 'default', '--flash_attn', 'auto', '--dataset_dir', 'data', '--dataset', 'medqa_question_poisoned_disease_count300', '--cutoff_len', '2048', '--learning_rate', '5e-05', '--num_train_epochs', '3.0', '--max_samples', '30000', '--per_device_train_batch_size', '2', '--gradient_accumulation_steps', '8', '--lr_scheduler_type', 'cosine', '--max_grad_norm', '1.0', '--logging_steps', '5', '--save_steps', '100', '--warmup_steps', '0', '--packing', 'False', '--train_on_prompt', 'True', '--enable_thinking', 'False', '--report_to', 'none', '--output_dir', 'saves/Qwen3-4B-Base/lora/train_question_poisoned_count300_2025-11-24-18-03-28', '--bf16', 'True', '--plot_loss', 'True', '--trust_remote_code', 'True', '--ddp_timeout', '180000000', '--include_num_input_tokens_seen', 'True', '--optim', 'adamw_torch', '--lora_rank', '8', '--lora_alpha', '16', '--lora_dropout', '0', '--lora_target', 'all']' returned non-zero exit status 1.
+[W1124 17:51:53.732530797 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
